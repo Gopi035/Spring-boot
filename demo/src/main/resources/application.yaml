@@ -1,0 +1,31 @@
+server:
+  address: 0.0.0.0
+  port: 9090
+spring:
+  data:
+    rest:
+      basePath: /api
+  datasource:
+    #    driver-class-name: com.mysql.cj.jdbc.Driver
+    maxActive: 5
+    password: root
+    url: jdbc:mysql://localhost:3306/sign-up
+    username: root
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      use-new-id-generator-mappings: false
+    open-in-view: false
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+    show-sql: true
+  security:
+    ignored: /**
+    user:
+      name: admin
+      password: admin
+
+
